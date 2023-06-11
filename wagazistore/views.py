@@ -16,3 +16,6 @@ def cart(request):
 
 def contact(request):
     return render(request,"contact.html")
+
+def shop(request):
+    return render(request,"shop.html")
