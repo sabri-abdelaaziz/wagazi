@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-p_8*ud9j7w&59x%y^vj=62t_&v75u+go2*1+k=o(7s=%1e)72i"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['wagazistore.azurewebsites.net','127.0.0.1']
 
