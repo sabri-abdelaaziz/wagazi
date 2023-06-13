@@ -2,7 +2,7 @@ from django.shortcuts import render
 import pyodbc
 from django.http import HttpResponse
 from django.shortcuts import redirect
-from .models import Product
+
 # Create your views here.
 
 
@@ -29,7 +29,6 @@ def cart(request):
     return render(request,"cart.html")
 
 def shop(request):
-    products = Product.objects.all()
-    return render(request,"shop.html",{'products': products})
+    return render(request,"shop.html")
 
 
