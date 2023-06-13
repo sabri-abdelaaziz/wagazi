@@ -1,5 +1,5 @@
 django==4.2.2
-mysql-connector-python==8.0.26
+mysql-connector-python==8.0.33
 mysqlclient==2.1.1 
 
 
