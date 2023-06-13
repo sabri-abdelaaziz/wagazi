@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-p_8*ud9j7w&59x%y^vj=62t_&v75u+go2*1+k=o(7s=%1e)72i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['wagazistore.azurewebsites.net']
+ALLOWED_HOSTS = ['wagazistore.azurewebsites.net','127.0.0.1']
 
 
 # Application definition
@@ -75,12 +75,25 @@ WSGI_APPLICATION = "wagazistoreapp.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        
+
+    'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'wagazi1-store.mysql.database.azure.com',
+        'PORT': '3306',
+        'NAME': 'wagazistore',
+        'USER': 'wagazistore_tabadrist2023',
+        'PASSWORD': 'v%3=QeZaT$$7n',
+        'OPTIONS': {
+            'ssl': {'ca': 'DigiCertGlobalRootCA.crt.pem'},
+        },
     }
 }
+
 
 
 # Password validation
@@ -111,8 +124,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
